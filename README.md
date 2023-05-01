@@ -1,4 +1,5 @@
-# Oracle-DB-Lecture-Notes-
+# Oracle-DB-SQL-Developer-Lecture-Notes
+
 In this repo, there are lecture notes of Oracle DB and SQL Developer tools.
  
 ![image](https://user-images.githubusercontent.com/5441882/235535781-a464ed38-f302-49cc-935c-382093715b34.png)
