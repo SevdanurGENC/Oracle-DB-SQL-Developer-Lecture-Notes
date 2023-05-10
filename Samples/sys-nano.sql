@@ -16,17 +16,6 @@ insert into Gruplar values('E');
 insert into Gruplar values('F');
 
 select * from Gruplar;
-DELETE FROM Gruplar; 
-alter table Gruplar
-  modify constraint pk_Gruplar disable;
- 
-
--- Gruplar tablosunu silmek
-drop table Gruplar;
-DELETE FROM Gruplar;
-
-
-
 
 -- Stadlar tablosunun olusturulmasi
 Create Table Stadlar(
@@ -49,9 +38,6 @@ insert into Stadlar values(8014, 'Nou Camp', 3000, to_date('01/01/1920', 'MM/DD/
 select * from Stadlar;
 drop table Stadlar;
 
-
-
-
 -- Takimlar tablosunun olusturulmasi
 
 Create Table Takimlar(
@@ -64,14 +50,11 @@ constraint pk_Takimlar primary key(tkno),
 constraint fk_Takimlar foreign key(gname) references Gruplar(g_name)
 );
 
-select * from Takimlar; 
-drop table Takimlar; 
-DELETE FROM Takimlar;
+select * from Takimlar;
+  
+drop table Takimlar
 
--- Takimlar tablosuna puan alaninin eklenmesi
 
-Alter table Takimlar
-Add puan integer;
 
 --  Takimlar tablosuna veri girilmesi
 
@@ -84,7 +67,6 @@ insert into Takimlar values(11, 'Dmg United', to_date('03/10/1978', 'MM/DD/YYYY'
 
 select * from Takimlar;
 
- 
 
 
 -- Maclar tablosunun olusturulmasi
@@ -113,4 +95,17 @@ insert into Maclar values(20, to_date('12/11/2011', 'MM/DD/YYYY'),1,1,14,13,5465
 insert into Maclar values(19, to_date('11/19/2011', 'MM/DD/YYYY'),1,0,11,13,5465);
 
 select * from Maclar;
+
+
+-- Takimlar tablosuna puan alaninin eklenmesi
+
+Alter table Takimlar
+Add puan integer;
+
  
+ 
+
+
+
+ 
+
