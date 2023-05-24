@@ -4,17 +4,17 @@ declare
 ucret int;
 begin
     select maas into ucret
-    from personel
+    from personelOrnek
     where ad='Sevdanur'; 
-    while ucret<2500 loop 
-        update personel
+    while ucret<3500 loop 
+        update personelOrnek
         set maas=ucret*1.1
         where ad='Sevdanur'; 
         ucret:=ucret*1.1;
     end loop;
 end;
 
-select * from personel;
+select * from personelOrnek;
 
 
 -- For Loop Yapisi  

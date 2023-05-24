@@ -20,9 +20,15 @@ exception
 end;
 end;
 
-select * from takimlar
+select * from takimlar;
+
+select ornek2('Man. United') from dual;
+DROP FUNCTION ornek2;
+set serveroutput on;
 
 
+
+ 
 ----------------------------------------------
 
 declare
@@ -36,4 +42,4 @@ exception
     when dmg_hata then
         dbms_output.put_line('Gruptan cikamaz');
 end;
-
+  

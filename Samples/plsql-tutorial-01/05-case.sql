@@ -13,4 +13,4 @@ begin
         else dbms_output.put_line ('6. Grup');
     end case;
 end;
- 
+select * from takimlar;

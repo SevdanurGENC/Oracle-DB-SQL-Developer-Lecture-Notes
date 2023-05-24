@@ -5,7 +5,7 @@ begin
     from stadlar
     where isim='Inonu';
     if fark>1000 then
-        dbms_output.put_line('Kapasitesi 10000den buyuk');
+        dbms_output.put_line('Kapasitesi 1000den buyuk');
     end if;
 end;
 
@@ -19,10 +19,10 @@ begin
     select kapasite into fark
     from stadlar
     where isim='Inonu';
-    if fark>10000 then
-        dbms_output.put_line('Kapasitesi 10000den buyuk');
+    if fark>1000 then
+        dbms_output.put_line('Kapasitesi 1000den buyuk');
     else
-        dbms_output.put_line('Kapasitesi 10000den kucuk');
+        dbms_output.put_line('Kapasitesi 1000den kucuk');
     end if;
 end;
 
@@ -33,12 +33,12 @@ fark number(5);
 begin
     select max(kapasite) into fark
     from stadlar;
-    if fark=10000 then
-        dbms_output.put_line('Kapasitesi 10000');
-    elsif fark=20000 then
-        dbms_output.put_line('Kapasitesi 20000');
+    if fark=1000 then
+        dbms_output.put_line('Kapasitesi 1000');
+    elsif fark=2000 then
+        dbms_output.put_line('Kapasitesi 2000');
     else
-        dbms_output.put_line('Kapasitesi 20000den buyuk');
+        dbms_output.put_line('Kapasitesi 2000den buyuk');
     end if;
 end;
 
