@@ -10,16 +10,20 @@ as
 begin
     select puan into dmg
     from takimlar
-    where gname=grup and isim=takim;
+    where gname=grup and isim=takim; 
+    dbms_output.put_line('dmg degeri : ' || dmg);
     exception
     when value_error then
     dbms_output.put_line('Degerlerde sorun var..');
 end puan_goster;
 
-execute puan_goster(takim=>'Besiktas'/*varchar2*/,grup=>'A'/*varchar2*/,dmg=>3/*number*/);
-exec puan_goster('Besiktas','A',3); 
 
-select * from takimlar;
+begin
+variable output number;
+execute puan_goster('Besiktas','A',:output);
+end;
+ 
+select * from takimlar; 
 
 
 ------------------------------
@@ -30,10 +34,11 @@ sayi in varchar2, yeni out varchar2
 as
 begin
 yeni := sayi || sayi;
+dbms_output.put_line('Ekran ciktisi : ' || yeni);
 exception
 when value_error then
 dbms_output.put_line('Degerlerde bir sorun var..');
-end;
+end; 
 
-sayi_ekleme(sayi=>'10'/*varchar2*/,yeni=>'5'/*varchar2*/);
-exec sayi_ekleme('10','5'); 
+variable output number;
+execute sayi_ekleme('10',:output); 
