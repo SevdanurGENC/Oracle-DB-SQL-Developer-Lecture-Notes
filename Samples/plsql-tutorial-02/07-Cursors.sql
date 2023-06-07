@@ -27,6 +27,14 @@ end;
 ---------------------------------
 
 
+create table turatlama(
+isim varchar(50),
+puan NUMBER
+)
+
+select * from turatlama
+
+
 declare 
 cursor c1 is
 select isim, puan from takimlar where puan>9;

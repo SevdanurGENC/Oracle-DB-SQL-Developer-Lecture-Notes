@@ -9,15 +9,16 @@ begin
 return ucret;
 end tur_ucret;
 
-select tur_ucret('Besiktas') from takimlar;
+select tur_ucret('Besiktas') from dual;
+
 select * from takimlar;
 -------------------------------
 
-create or replace function karekok(sayi number)
+create or replace function kare(sayi number)
 return number
-is
+is 
 begin
-return power(sayi,2);
+ return power(sayi,2); 
 end;
 
-select karekok(9);
+select kare(9) from dual;

@@ -31,3 +31,22 @@ select * from maclar;
 select * from takimlar;
 
 select * from Macsonucu;
+
+
+
+
+
+
+
+----------------------
+create or replace view Macsonucu
+as
+    select tBir.isim, m.gol_evsahibi, tIki.isim, m.gol_konuk
+    from takimlar tBir, takimlar tIki, maclar m
+    where m.tkm_id_ev=tBir.tkno and m.tkm_id_konuk=tIki.tkno and tBir.gname='A'
+with read only;
+
+select * from maclar;
+select * from takimlar;
+
+select * from Macsonucu;

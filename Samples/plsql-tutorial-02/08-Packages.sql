@@ -21,4 +21,4 @@ end dort_islem;
 
 select dort_islem.hesapla(6,4,'+') "Toplama islemi",
         dort_islem.hesapla(6,4,'-') "Cikarma islemi"
-from takimlar;
+from dual;
